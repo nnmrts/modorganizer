@@ -599,7 +599,7 @@ QVariant ModList::headerData(int section, Qt::Orientation orientation, int role)
     } else if (role == Qt::ToolTipRole) {
       return getColumnToolTip(section);
     } else if (role == Qt::TextAlignmentRole) {
-      return QVariant(Qt::AlignCenter);
+      return QVariant(Qt::AlignLeft | Qt::AlignVCenter);
     } else if (role == MOBase::EnabledColumnRole) {
       if (section == COL_CONTENT) {
         return !m_Organizer->modDataContents().empty();
