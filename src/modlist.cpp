@@ -271,7 +271,7 @@ QVariant ModList::data(const QModelIndex& modelIndex, int role) const
   } else if (role == Qt::TextAlignmentRole) {
     if (column == COL_NAME) {
       if (modInfo->getHighlight() & ModInfo::HIGHLIGHT_CENTER) {
-        return QVariant(Qt::AlignCenter | Qt::AlignVCenter);
+        return QVariant(Qt::AlignLeft | Qt::AlignVCenter);
       } else {
         return QVariant(Qt::AlignLeft | Qt::AlignVCenter);
       }
